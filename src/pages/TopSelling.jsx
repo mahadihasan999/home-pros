@@ -16,7 +16,7 @@ const TopSelling = () => {
           {products?.slice(0, 4)?.map((data) => (
             <div>
               <Link to={`/details/${data.propertyID}`}>
-                <div className="mx-2 w-72 lg:mb-0 mb-8  shadow">
+                <div className="px-2 lg:w-72 md:w-72 w-full lg:mb-0 mb-8  shadow">
                   <div>
                     {data.images.slice(0, 1).map((data) => (
                       <img

@@ -23,7 +23,7 @@ export default function Navbar() {
   const { user, signOutUser } = useAuth();
   return (
     <>
-      <div className="bg-gray-200 h-full w-full">
+      <div className="bg-gray-200 h-full w-full ">
         {/* Code block starts */}
         <nav className="bg-white shadow xl:block hidden">
           <div className="mx-auto container px-6 py-2 xl:py-0">
@@ -335,7 +335,7 @@ export default function Navbar() {
           </div>
         </nav>
         <nav>
-          <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-40">
+          <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white 0 top-0 z-40">
             <Link to="/" className="w-24">
               <img
                 className="w-32"
@@ -353,6 +353,7 @@ export default function Navbar() {
                   ""
                 ) : (
                   <svg
+                    onClick={() => window.scrollTo(0, 0)}
                     xmlns="http://www.w3.org/2000/svg"
                     className="icon icon-tabler icon-tabler-menu-2"
                     width={24}
@@ -385,7 +386,7 @@ export default function Navbar() {
               className="bg-gray-800 opacity-50 w-full h-full"
               onClick={() => setShow(!show)}
             />
-            <div className="w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+            <div className="w-64 z-40 0 overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
               <div className="px-6 h-full">
                 <div className="flex flex-col justify-between h-full w-full">
                   <div>
@@ -497,17 +498,14 @@ export default function Navbar() {
                       )}
                     </ul>
                   </div>
-                  {user.displayName && (
+                  {user?.displayName ? (
                     <div className="w-full pt-4">
                       <div className="border-t border-gray-300">
                         <div className="w-full flex items-center justify-between pt-1">
                           <div className="flex items-center">
                             <AiOutlineUser />
                             <p className=" text-gray-800 text-base leading-4 ml-2">
-                              {user.displayName?.displayName}{" "}
-                              <span className="text-lime-500">
-                                (user.displayName)
-                              </span>
+                              {user.displayName}{" "}
                             </p>
                           </div>
                           <Link onClick={signOutUser}>
@@ -518,6 +516,12 @@ export default function Navbar() {
                         </div>
                       </div>
                     </div>
+                  ) : (
+                    <Link to="/sign-in" onClick={() => setShow(!show)}>
+                      <button class="bg-lime-600 hover:bg-lime-600 text-gray-100 font-bold py-2 px-4 rounded">
+                        Login
+                      </button>
+                    </Link>
                   )}
                 </div>
               </div>

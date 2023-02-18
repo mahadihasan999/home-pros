@@ -6,7 +6,7 @@ const Properties = () => {
   const { products } = useProducts();
   return (
     <div>
-      <div className="mx-auto container py-20 ">
+      <div className="mx-auto container py-20 px-2">
         <a href="#home">
           <button className="text-sm font-bold">
             Home/ <span className="font-normal">All Products</span>

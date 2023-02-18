@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center">
           <Link
             onClick={() => window.scrollTo(0, 0)}
-            className="bg-gray-100 p-3 rounded"
+            className="bg-gray-100 Link-3 rounded"
           >
             <img
               className="w-24"
@@ -17,18 +17,24 @@ const Footer = () => {
             />
           </Link>
           <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
-            <p className="hover:text-gray-200 text-base cursor-pointer leading-4 text-gray-100">
+            <Link className="hover:text-gray-200 text-base cursor-pointer leading-4 text-gray-100">
               About
-            </p>
-            <p className="hover:text-gray-200 text-base cursor-pointer leading-4 text-gray-100">
+            </Link>
+            <Link className="hover:text-gray-200 text-base cursor-pointer leading-4 text-gray-100">
               Contact us
-            </p>
-            <p className="hover:text-gray-200 text-base cursor-pointer leading-4 text-gray-100">
+            </Link>
+            <Link
+              to="/about"
+              className="hover:text-gray-200 text-base cursor-pointer leading-4 text-gray-100"
+            >
               Terms of Service
-            </p>
-            <p className="hover:text-gray-200 text-base cursor-pointer leading-4 text-gray-100">
-              Privacy Policy
-            </p>
+            </Link>
+            <Link
+              to="/about"
+              className="hover:text-gray-200 text-base cursor-pointer leading-4 text-gray-100"
+            >
+              About us
+            </Link>
           </div>
           <div className="flex items-center gap-x-8 mt-6">
             <div className="cursor-pointer">
@@ -88,13 +94,17 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex items-center mt-6">
-            <p className="text-base leading-4 text-gray-100">
+            <Link
+              to="/"
+              onClick={() => window.scrollTo(0, 0)}
+              className="text-base leading-4 text-gray-100"
+            >
               2023 <span className="font-semibold">Home Pros</span>
-            </p>
+            </Link>
             <div className="border-l border-gray-800 pl-2 ml-2">
-              <p className="text-base leading-4 text-gray-100">
+              <Link className="text-base leading-4 text-gray-100">
                 Inc. All righys reserved
-              </p>
+              </Link>
             </div>
           </div>
         </div>

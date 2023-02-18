@@ -125,7 +125,7 @@ const SideNav = () => {
             <nav
               className={`${
                 admin ? "block" : "hidden"
-              } flex fixed flex-col w-64 bg-lime-500 h-screen px-4`}
+              } flex fixed flex-col w-64 bg-lime-500 h-screen px-4 mt-9`}
             >
               <div className="flex items-center mt-14 mb-4 px-2 gap-2">
                 <div className="">

@@ -111,7 +111,7 @@ const AddProduct = () => {
 
   return (
     <>
-      <div className="mx-auto container px-6  lg:py-20 md:py-16 z-0">
+      <div className="mx-auto container px-6  lg:py-20 md:py-16 z-0 -mt-28">
         <h1 className="lg:text-4xl md:text-3xl text-xl font-semibold text-gray-800 text-center py-3">
           Add New Product
         </h1>

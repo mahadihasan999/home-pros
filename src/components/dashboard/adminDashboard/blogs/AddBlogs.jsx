@@ -65,7 +65,7 @@ const AddBlogs = () => {
     myWidget.open();
   }
   return (
-    <div className="container mx-auto lg:py-20 ">
+    <div className="container mx-auto lg:py-20 -mt-28">
       <Toaster />
       <h1 className="lg:text-4xl md:text-3xl text-xl font-semibold text-gray-800 text-center py-3">
         Add New Blog
