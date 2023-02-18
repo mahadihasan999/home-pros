@@ -90,7 +90,7 @@ const AddProduct = () => {
       area: area,
       city: city,
     };
-    fetch("http://localhost:5000/products", {
+    fetch("https://home-server.malihatabassum.com/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -101,6 +101,7 @@ const AddProduct = () => {
       .then((data) => {
         if (data.acknowledged) {
           toast.success("Successfully Added!");
+          navigate("/");
         } else {
           toast.error("This didn't work.");
         }
@@ -136,9 +137,7 @@ const AddProduct = () => {
               <option value="Commercial Space">Commercial Space</option>
               <option value="Office Space">Office Space</option>
               <option value="Luxury Collection">Luxury Collection</option>
-              <option value="Shop & Restaurants Space">
-                Shop & Restaurants Space
-              </option>
+              <option value="Bachelor Apartment">Bachelor Apartment</option>
             </select>
 
             <Label htmlFor="area" text="Area" />
@@ -347,8 +346,8 @@ const AddProduct = () => {
                     <div className="">
                       <div className="w-12 h-12 bg-cover bg-center rounded-md">
                         <img
-                          src={image.photo_url}
-                          alt={image.photo_url}
+                          src={element.photo_url}
+                          alt={element.photo_url}
                           className="h-full w-full overflow-hidden object-cover rounded-full border-2 border-white dark:border-gray-700 shadow"
                         />
                       </div>

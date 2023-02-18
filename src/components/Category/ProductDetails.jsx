@@ -12,7 +12,7 @@ export default function ProductDetails() {
   const [id, setID] = useState(key);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://home-server.malihatabassum.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [id]);
@@ -28,7 +28,7 @@ export default function ProductDetails() {
         className="text-sm font-bold mt-4 mx-2"
         onClick={() => navigate(-1)}
       >
-        {product.category}/
+        {product.category}
         <span className="font-normal">/{product.title?.slice(0, 30)}...</span>
       </button>
       <div className=" flex justify-between px-2 bg-gray-50 py-5">

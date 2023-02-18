@@ -9,7 +9,7 @@ const BlogDetails = () => {
 
   const [key, setID] = useState(id);
   useEffect(() => {
-    fetch(`http://localhost:5000/blogs/${key}`)
+    fetch(`https://home-server.malihatabassum.com/blogs/${key}`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [key]);

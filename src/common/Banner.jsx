@@ -2,72 +2,91 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 function IndexPage() {
   const [menu, setMenu] = useState(false);
+  const [location, setLocaton] = useState("Dhanmondi");
+  const [propertyType, setPropertyType] = useState("Furnished Apartment");
+  let queary;
+
+  // const queary = location + cut + propertyType;
+
+  if (location && propertyType) {
+    queary = location + "&" + propertyType;
+  } else {
+    queary = propertyType;
+  }
+
   return (
     <>
-      <div className="w-full h-full pb-10 bg-gradient-to-l from-lime-600 ... z-50">
-        <div className="hidden md:block">
-          {/* <img
-            className="absolute bg-cover bg-center w-full h-full inset-0"
-            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Hero%2008.png"
-            alt
-          /> */}
-        </div>
-
-        <div className="relative px-4 xl:px-0 container mx-auto md:flex items-center gap-8">
-          <div className="text-color w-full md:w-1/3 pt-16 lg:pt-32 xl:pt-12">
-            <h1 className="text-4xl md:text-4xl lg:text-6xl w-11/12 lg:w-11/12 xl:w-full xl:text-6xl text-gray-900 font-extrabold f-f-l">
-              Build, review and ship with ease
-            </h1>
-            <div className="f-f-r text-base lg:text-base pb-20 sm:pb-0 pt-10 xl:pt-6">
-              <h2>
-                The next big thing starts here. Start building with Prodify and
-                be the first to market with a product that is ready to take on
-                the competition and delight your customers
-              </h2>
+      <div className="bg-gradient-to-b from-lime-500 w-full">
+        <div className="px-4 py-16">
+          <div className="md:flex justify-center gap-8 items-center">
+            <div>
+              <img
+                src="https://res.cloudinary.com/djejkfzz6/image/upload/v1676705451/rpeliqtzj4wpmnpekfok.png"
+                className="lg:block md:hidden block h-96"
+                alt="cover"
+              />
             </div>
-            <div className="lg:flex">
-              <button className="hidden md:block hover:opacity-90 text-base w-full xl:text-base xl:w-6/12 mt-4 xl:mt-8 f-f-r py-4  bg-lime-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-700 rounded-lg">
-                Start building now
-              </button>
-              <button className="hidden md:block hover:opacity-90 text-base w-full xl:text-base xl:w-4/12 lg:ml-2 xl:ml-2 mt-4 xl:mt-8 f-f-r py-4  bg-lime-200 text-lime-600 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-700 rounded-lg">
-                Try it out
-              </button>
+            <div>
+              <p className="lg:text-4xl md:text-3xl text-3xl font-semibold md:text-left text-center">
+                A home changes everything.
+              </p>
+              <p className="text-base text-gray-600 max-w-[624px] w-full mt-6 md:text-left text-center pb-3">
+                HomePros is a leading letting-property portal web-site with a
+                comprehensive search facility for property-finders to find any
+                kind of property they wish to live in. We also offer a wide
+                range of services.
+              </p>
+              <div className="py-2 lg:pb-6 md:pb-6 flex items-center justify-start text-center ">
+                <select
+                  name="location"
+                  id="location"
+                  value={location}
+                  onChange={(e) => setLocaton(e.target.value)}
+                  className="py-2  border px-2"
+                >
+                  <option value="Dhanmondi">Dhanmondi</option>
+                  <option value="Banani">Banani</option>
+                  <option value="Gulsan">Gulsan</option>
+                  <option value="Purbacal">Purbacal</option>
+                  <option value="Mohammadpur">Mohammadpur</option>
+                </select>
+
+                <select
+                  name="category"
+                  id="category"
+                  value={propertyType}
+                  onChange={(e) => setPropertyType(e.target.value)}
+                  className="py-2  border px-2"
+                >
+                  <option value="Furnished Apartment">
+                    Furnished Apartment
+                  </option>
+                  <option value="Residential Apartment">
+                    Residential Apartment
+                  </option>
+                  <option value="Commercial Space">Commercial Space</option>
+                  <option value="Office Space">Office Space</option>
+                  <option value="Luxury Collection">Luxury Collection</option>
+                  <option value="Bachelor Apartment">Bachelor Apartment</option>
+                </select>
+
+                <Link
+                  to={`/search/${queary}`}
+                  className="py-2  bg-lime-600 text-gray-100 px-4 hidden lg:block md:block "
+                >
+                  Search
+                </Link>
+              </div>
+              <Link
+                to={`/search/${queary}`}
+                className="py-2  bg-lime-600 text-gray-100 px-4 block lg:hidden md:hidden text-center font-semibold text-xl "
+              >
+                Search
+              </Link>
             </div>
           </div>
-          {/* <img
-            className="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0"
-            src="https://www.wellsvillecity.com/wp-content/uploads/2021/07/Property-Tax-500x500.jpg"
-            alt="sample-page"
-          /> */}
-          <button className="md:hidden hover:opacity-90 text-base w-full xl:text-base xl:w-6/12 mt-4 xl:mt-8 f-f-r py-4  bg-lime-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-700 rounded-lg">
-            Start building now
-          </button>
-          <button className="md:hidden hover:opacity-90 text-base w-full xl:text-base xl:w-4/12 xl:ml-2 mt-4 xl:mt-8 f-f-r py-4  bg-lime-200 text-lime-600 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-700 rounded-lg">
-            Try it out
-          </button>
         </div>
       </div>
-
-      <style>{`
-        .top-100 {
-            animation: slideDown .5s ease-in-out;
-        }
-
-        @keyframes slideDown {
-            0% {
-                top: -50%;
-            }
-
-            100% {
-                top: 0;
-            }
-        }
-
-        * {
-            outline: none !important;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            -webkit-tap-highlight-color: transparent;
-        } `}</style>
     </>
   );
 }

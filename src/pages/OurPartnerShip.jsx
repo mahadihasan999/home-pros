@@ -17,8 +17,7 @@ function OurPartnerShip() {
                 Why choose us
               </p>
               <p className="text-lg leading-7 text-gray-600 mt-4 xl:w-7/12 w-full">
-                Whether article spirits new her covered hastily sitting her.
-                Money witty books nor son add
+                We also offer a wide range of services.
               </p>
               <div className="lg:hidden lg:w-3/5 xl:w-3/5 w-full lg:mt-0 mt-6">
                 <img

@@ -25,55 +25,10 @@ const Category = () => {
   const key3 = "Furnished Apartment";
   const key4 = "Luxury Collection";
   const key5 = "Office Space";
-  const key6 = "Shop & Restaurants Space";
+  const key6 = "Bachelor Apartment";
   return (
-    <div className="bg-gray-100 py-10 px-4 ">
-      <div className="py-2 lg:pb-6 md:pb-6 flex items-center justify-center ">
-        <select
-          name="location"
-          id="location"
-          value={location}
-          onChange={(e) => setLocaton(e.target.value)}
-          className="py-2  border"
-        >
-          <option value="Dhanmondi">Dhanmondi</option>
-          <option value="Banani">Banani</option>
-          <option value="Gulsan">Gulsan</option>
-          <option value="Purbacal">Purbacal</option>
-          <option value="Mohammadpur">Mohammadpur</option>
-        </select>
-
-        <select
-          name="category"
-          id="category"
-          value={propertyType}
-          onChange={(e) => setPropertyType(e.target.value)}
-          className="py-2  border"
-        >
-          <option value="Furnished Apartment">Furnished Apartment</option>
-          <option value="Residential Apartment">Residential Apartment</option>
-          <option value="Commercial Space">Commercial Space</option>
-          <option value="Office Space">Office Space</option>
-          <option value="Luxury Collection">Luxury Collection</option>
-          <option value="Shop & Restaurants Space">
-            Shop & Restaurants Space
-          </option>
-        </select>
-
-        <Link
-          to={`/search/${queary}`}
-          className="py-2  bg-lime-600 text-gray-100 px-4 hidden lg:block md:block "
-        >
-          Search
-        </Link>
-      </div>
+    <div className=" py-10 px-4 ">
       <div className="text-center">
-        <Link
-          to={`/search/${queary}`}
-          className="py-2 mb-4 bg-lime-600 text-gray-100 px-4 block lg:hidden md:hidden mx-32"
-        >
-          Search
-        </Link>
         <h1 className="lg:text-4xl text-3xl font-semibold text-gray-800 text-center pb-6">
           What You Want?
         </h1>
@@ -99,20 +54,20 @@ const Category = () => {
             </h2>
           </Link>
           <Link
-            to={`/category/${key2}`}
-            className="cursor-pointer hover:shadow hover:scale-105 py-6 xl:px-4 rounded xl:w-60 w-40 flex justify-center items-center flex-col text-lime-600 shadow shadow-lime-600  text-lime-600"
+            to={`/category/${key6}`}
+            className="cursor-pointer hover:shadow hover:scale-105 py-6 xl:px-4 rounded xl:w-60 w-40 flex justify-center items-center flex-col  shadow shadow-lime-600  bg-lime-500"
           >
             <div className="mb-2">
-              <img src="https://img.icons8.com/ios/50/40C057/building-with-rooftop-terrace.png" />
+              <img src="https://img.icons8.com/external-becris-lineal-becris/64/FFFFFF/external-single-finance-taxation-becris-lineal-becris.png" />
             </div>
 
             <h2 className="dark:gray-white text-xl font-semibold text-center ">
-              Residential Apartment
+              Bachelor Apartment
             </h2>
           </Link>
           <Link
             to={`/category/${key3}`}
-            className="cursor-pointer hover:shadow hover:scale-105 py-6 xl:px-4 rounded xl:w-60 w-40 flex justify-center items-center flex-col text-lime-600 shadow shadow-lime-600  text-lime-600"
+            className="cursor-pointer hover:shadow hover:scale-105 py-6 xl:px-4 rounded xl:w-60 w-40 flex justify-center items-center flex-col text-lime-600 shadow shadow-lime-600  "
           >
             <div className="mb-2">
               <img src="https://img.icons8.com/ios/50/40C057/apartment.png" />
@@ -150,18 +105,15 @@ const Category = () => {
             </h2>
           </Link>
           <Link
-            to={`/category/${key6}`}
+            to={`/category/${key2}`}
             className="cursor-pointer hover:shadow hover:scale-105  py-6 xl:px-4 rounded xl:w-60 w-40 flex justify-center items-center flex-col text-lime-600 shadow shadow-lime-600  text-lime-600"
           >
             <div className="mb-2">
-              <img
-                className="h-[50px]"
-                src="https://img.icons8.com/external-photo3ideastudio-lineal-photo3ideastudio/64/40C057/external-restaurant-public-service-photo3ideastudio-lineal-photo3ideastudio.png"
-              />
+              <img src="https://img.icons8.com/ios/50/40C057/building-with-rooftop-terrace.png" />
             </div>
 
             <h2 className="dark:gray-white text-xl font-semibold text-center ">
-              Restaurants Space
+              Residential Apartment
             </h2>
           </Link>
         </div>

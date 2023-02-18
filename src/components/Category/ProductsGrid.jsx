@@ -14,8 +14,17 @@ const ProductsGrid = () => {
       </button>
 
       <div className="text-center py-4">
-        <h1 className="tex-3xl"> {id}</h1>
+        {!products ? (
+          <h1 className="lg:text-4xl text-3xl  text-gray-800 text-center mt-10">
+            loading...
+          </h1>
+        ) : (
+          <h1 className="lg:text-4xl text-3xl font-semibold text-gray-800 text-center ">
+            {id}
+          </h1>
+        )}
       </div>
+
       <div className="grid md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 grid-cols-2 gap-6 mx-2">
         {products
           ?.filter((data) => data.category === id)
