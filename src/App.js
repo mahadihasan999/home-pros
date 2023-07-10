@@ -93,13 +93,9 @@ function App() {
             <Route path="/dashboard/*" element={<Admin />} />
             <Route path="/manage-properties" element={<AddProduct />} />
             <Route path="/manage-blogs" element={<AddBlogs />} />
-
             <Route exact path="/search/:id" element={<Allproduct />} />
-
             <Route exact path="/properties" element={<Properties />} />
-
             <Route exact path="/blogs/:id" element={<BlogDetails />} />
-
             <Route path="/manage-products" element={<ManageProducts />} />
             <Route path="/manage-products" element={<ManageProducts />} />
             <Route exact path="/category/:id" element={<ProductsGrid />} />

@@ -99,7 +99,7 @@ export default function Navbar() {
                           <div className="w-12 cursor-pointer flex text-sm border-2 border-transparent rounded focus:outline-none focus:border-white transition duration-150 ease-in-out">
                             <img
                               className="rounded h-10 w-10 object-cover"
-                              src="https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_1.png"
+                              src="https://res.cloudinary.com/djejkfzz6/image/upload/v1689009335/gshmuc1n5zvgfvb30dqg.png"
                               alt="logo"
                             />
                           </div>
@@ -197,7 +197,7 @@ export default function Navbar() {
                 <div className="flex items-center">
                   <img
                     className="w-24"
-                    src="https://res.cloudinary.com/djejkfzz6/image/upload/v1674570459/bvcrwz8dcvcwlv4tjfjn.png"
+                    src="https://res.cloudinary.com/djejkfzz6/image/upload/v1689009335/gshmuc1n5zvgfvb30dqg.png"
                     alt=""
                   />
                 </div>
@@ -339,7 +339,7 @@ export default function Navbar() {
             <Link to="/" className="w-24">
               <img
                 className="w-32"
-                src="https://res.cloudinary.com/djejkfzz6/image/upload/v1674570459/bvcrwz8dcvcwlv4tjfjn.png"
+                src="https://res.cloudinary.com/djejkfzz6/image/upload/v1689009335/gshmuc1n5zvgfvb30dqg.png"
                 alt=""
               />
             </Link>
@@ -398,7 +398,7 @@ export default function Navbar() {
                         <div className="flex items-center">
                           <img
                             className="w-32"
-                            src="https://res.cloudinary.com/djejkfzz6/image/upload/v1674570459/bvcrwz8dcvcwlv4tjfjn.png"
+                            src="https://res.cloudinary.com/djejkfzz6/image/upload/v1689009335/gshmuc1n5zvgfvb30dqg.png"
                             alt=""
                           />
                         </div>

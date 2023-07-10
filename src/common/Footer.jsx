@@ -12,7 +12,7 @@ const Footer = () => {
           >
             <img
               className="w-24"
-              src="https://res.cloudinary.com/djejkfzz6/image/upload/v1674570459/bvcrwz8dcvcwlv4tjfjn.png"
+              src="https://res.cloudinary.com/djejkfzz6/image/upload/v1689009335/gshmuc1n5zvgfvb30dqg.png"
               alt=""
             />
           </Link>
