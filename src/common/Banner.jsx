@@ -31,7 +31,7 @@ function IndexPage() {
                 A home changes everything.
               </p>
               <p className="text-base text-gray-600 max-w-[624px] w-full mt-6 md:text-left text-center pb-3">
-                HomePros is a leading letting-property portal web-site with a
+                FIndHome is a leading letting-property portal web-site with a
                 comprehensive search facility for property-finders to find any
                 kind of property they wish to live in. We also offer a wide
                 range of services.

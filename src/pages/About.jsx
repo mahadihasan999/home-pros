@@ -11,10 +11,10 @@ function About() {
               <div className="md:w-1/2 lg:w-2/3 w-full xl:pr-20 md:pr-6">
                 <div className="py-2 text-color">
                   <h1 className="tetext-xlxt-2xl lg:text-4xl md:leading-snug tracking-tighter f-f-l font-black">
-                    Welcome To HomePros
+                    Welcome To FIndHome
                   </h1>
                   <h2 className="text-lg lg:text-xl lg:leading-7 md:leading-10 f-f-r py-4 md:py-8">
-                    HomePros first dedicated rental portal and pioneer PropTech
+                    FIndHome first dedicated rental portal and pioneer PropTech
                     startup in Bangladesh that founded in backend 2013 and
                     launched its official website in 2015. We believe only
                     technology can make people life easy and simple. Our mission
