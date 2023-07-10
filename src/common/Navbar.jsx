@@ -383,7 +383,7 @@ export default function Navbar() {
             }
           >
             <div
-              className="bg-gray-800 opacity-50 w-full h-full"
+              className="bg-gray-800 opacity-50 w-full"
               onClick={() => setShow(!show)}
             />
             <div className="w-64 z-40 0 overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
