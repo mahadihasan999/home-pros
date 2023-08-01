@@ -26,7 +26,7 @@ const AddBlogs = () => {
     formData.append("date", date);
     formData.append("image", image);
 
-    fetch("https://home-server.malihatabassum.com/blogs", {
+    fetch("http://localhost:5000/blogs", {
       method: "POST",
       body: formData,
     })

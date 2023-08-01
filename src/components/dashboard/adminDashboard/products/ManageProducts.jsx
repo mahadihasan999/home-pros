@@ -9,12 +9,9 @@ const ManageProducts = () => {
   const [products, setProducts] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [page, setPage] = useState(0);
-
   const size = 8;
   useEffect(() => {
-    fetch(
-      `https://home-server.malihatabassum.com/products?page=${page}&&size=${size}`
-    )
+    fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data.products);
@@ -27,7 +24,7 @@ const ManageProducts = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      const url = `https://home-server.malihatabassum.com/products/${id}`;
+      const url = `http://localhost:5000/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -41,6 +38,8 @@ const ManageProducts = () => {
             setProducts(remainingUsers);
           }
         });
+
+      console.log(id);
     }
   };
 
