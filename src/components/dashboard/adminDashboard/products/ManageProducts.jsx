@@ -11,7 +11,9 @@ const ManageProducts = () => {
   const [page, setPage] = useState(0);
   const size = 8;
   useEffect(() => {
-    fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
+    fetch(
+      `https://home-server.malihatabassum.com/products?page=${page}&&size=${size}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setProducts(data.products);
@@ -24,7 +26,7 @@ const ManageProducts = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/products/${id}`;
+      const url = `https://home-server.malihatabassum.com/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })

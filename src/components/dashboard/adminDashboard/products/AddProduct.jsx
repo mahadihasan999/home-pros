@@ -90,7 +90,7 @@ const AddProduct = () => {
       area: area,
       city: city,
     };
-    fetch("http://localhost:5000/products", {
+    fetch("https://home-server.malihatabassum.com/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",

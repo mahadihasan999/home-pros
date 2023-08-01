@@ -16,7 +16,7 @@ const ManageBlogs = () => {
   // const [searchSort] = useState("totalLine");
 
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch("https://home-server.malihatabassum.com/blogs")
       .then((res) => res.json())
       .then(
         (result) => {
@@ -77,7 +77,7 @@ const ManageBlogs = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/blogs${id}`;
+      const url = `https://home-server.malihatabassum.com/blogs${id}`;
       fetch(url, {
         method: "DELETE",
       })

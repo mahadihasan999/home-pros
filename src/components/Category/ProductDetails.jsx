@@ -12,7 +12,7 @@ export default function ProductDetails() {
   const [id, setID] = useState(key);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://home-server.malihatabassum.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [id]);

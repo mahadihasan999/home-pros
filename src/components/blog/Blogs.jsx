@@ -9,7 +9,9 @@ const Blogs = () => {
 
   const size = 6;
   useEffect(() => {
-    fetch(`http://localhost:5000/blogs?page=${page}&&size=${size}`)
+    fetch(
+      `https://home-server.malihatabassum.com/blogs?page=${page}&&size=${size}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setDisplayBlogs(data.blogs);
