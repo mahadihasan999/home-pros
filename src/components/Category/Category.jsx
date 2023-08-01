@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import useProducts from "../../hooks/useProducts";
-
 import { Link } from "react-router-dom";
-import TextField from "../Form/TextField";
 
 const Category = () => {
-  const { products } = useProducts();
   const [location, setLocaton] = useState("Dhanmondi");
   const [propertyType, setPropertyType] = useState("Furnished Apartment");
 
@@ -19,21 +16,21 @@ const Category = () => {
     queary = propertyType;
   }
 
-  console.log(queary);
   const key1 = "Commercial Space";
   const key2 = "Residential Apartment";
   const key3 = "Furnished Apartment";
   const key4 = "Luxury Collection";
   const key5 = "Office Space";
   const key6 = "Bachelor Apartment";
+  const key7 = "To Let";
   return (
     <div className=" py-10 px-4 ">
-      <div className="text-center">
+      <div className="text-center ">
         <h1 className="lg:text-4xl text-3xl font-semibold text-gray-800 text-center pb-6">
           What You Want?
         </h1>
       </div>
-      <div className="mx-auto container flex items-center justify-center">
+      <div className="mx-auto container flex items-center justify-center flex flex-col">
         <div
           className="grid md:grid-cols-3 lg:grid-cols-3 grid-cols-2 gap-4 text-center text-gray-100 "
           id="home"
@@ -114,6 +111,20 @@ const Category = () => {
 
             <h2 className="dark:gray-white text-xl font-semibold text-center ">
               Residential Apartment
+            </h2>
+          </Link>
+        </div>
+        <div className=" pt-4">
+          <Link
+            to={`/category/${key7}`}
+            className="cursor-pointer hover:shadow hover:scale-105  py-6 xl:px-4 rounded xl:w-[150px] w-[150px] flex justify-center items-center flex-col text-lime-600 shadow shadow-lime-600  text-lime-600"
+          >
+            <div className="mb-2">
+              <img src="https://img.icons8.com/external-line-adri-ansyah/64/40C057/external-estate-real-estate-line-adri-ansyah-17.png" />
+            </div>
+
+            <h2 className="dark:gray-white text-xl font-semibold text-center ">
+              To Let
             </h2>
           </Link>
         </div>
