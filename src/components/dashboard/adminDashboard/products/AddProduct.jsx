@@ -138,7 +138,7 @@ const AddProduct = () => {
               <option value="Office Space">Office Space</option>
               <option value="Luxury Collection">Luxury Collection</option>
               <option value="Bachelor Apartment">Bachelor Apartment</option>
-              <option value="To Let">To Let</option>
+              <option value="Sub Let">Sub Let</option>
             </select>
 
             <Label htmlFor="area" text="Area" />

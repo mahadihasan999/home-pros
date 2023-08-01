@@ -9,7 +9,6 @@ const SingleBlogs = ({
   description,
   summary,
   excerpt,
-
   date,
   key,
   lastUpdated,

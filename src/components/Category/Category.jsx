@@ -22,7 +22,7 @@ const Category = () => {
   const key4 = "Luxury Collection";
   const key5 = "Office Space";
   const key6 = "Bachelor Apartment";
-  const key7 = "To Let";
+  const key7 = "Sub Let";
   return (
     <div className=" py-10 px-4 ">
       <div className="text-center ">
@@ -124,7 +124,7 @@ const Category = () => {
             </div>
 
             <h2 className="dark:gray-white text-xl font-semibold text-center ">
-              To Let
+              Sub Let
             </h2>
           </Link>
         </div>
