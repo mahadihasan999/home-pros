@@ -77,7 +77,7 @@ const ManageBlogs = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      const url = `https://home-server.malihatabassum.com/blogs${id}`;
+      const url = `https://home-server.malihatabassum.com/blogs/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -91,6 +91,7 @@ const ManageBlogs = () => {
             setItems(remainingUsers);
           }
         });
+      console.log(id);
     }
   };
 
